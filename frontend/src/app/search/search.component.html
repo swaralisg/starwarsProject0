@@ -1,0 +1,106 @@
+<!-- Creating a parallax background  -->
+<div class="parallax">
+ 
+ <!-- Creating an input box for name   -->
+<div style="text-align: center; margin-top: 30px; padding: 20px;"  class="fluid-container">
+<div class="row justify-content-center">
+<div style="padding-left: 10px; padding-right:10px ;" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<input  required type="text" id="input1" name="name" [(ngModel)]="name" placeholder="Search By Name" />&nbsp;&nbsp;&nbsp;&nbsp;
+<button id="search" onclick="document.getElementById('input2').value = ''"  (click)="onClickSearchBtn('name')">Search</button>
+</div>
+
+<!-- Creating an input box for ID -->
+<div  style="padding-left: 10px; padding-right:10px ;"  class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<input  required id="input2" type="number" name="id" [(ngModel)]="id" placeholder="Search By ID" /> &nbsp;&nbsp;&nbsp;&nbsp;
+<button id="search" onclick="document.getElementById('input1').value = ''" (click)="onClickSearchBtn('id')">Search</button>
+</div>
+</div>
+</div>
+
+
+<!-- Displaying all the data fetched from  the APIs -->
+<div class="container">
+<div id="display-card" style="background: url('./assets/images/displaybanner1.gif');"  class="card">
+
+<div class="data-display" *ngIf="this.check==0; else error">
+    <div class="row justify-content-center">
+   <label id="blue">Name :</label>&nbsp;  {{ starwarsData?.name }} 
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue">Height :</label> &nbsp;{{ starwarsData?.height }}
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue">Mass :</label> {{ starwarsData?.mass }}
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue"> Hair Color : </label>&nbsp; {{ starwarsData?.hair_color }}
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue">Skin Color :</label>&nbsp; {{ starwarsData?.skin_color }}
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue">Gender :</label>&nbsp; {{ starwarsData?.gender }}
+    </div>
+    <div class="row justify-content-center">
+    <label id="blue">Birth Year :</label>&nbsp; {{ starwarsData?.birth_year }}
+    </div>
+ 
+    <!-- Hitting a nested API for films and displaying all teh data relevant to films. -->
+    <label id="heading">Films:</label>
+    <div *ngFor="let film of starwarsData?.films">
+      <div style="cursor: pointer;" (click)="getDataForAPI(film, 'films')">
+        {{ film }}&nbsp;&nbsp;&nbsp;<label style="text-decoration: underline; font-size: 23px;"> (click here to see details)</label> 
+      </div>
+    </div>
+    <div >
+      <p ><label id="blue">Movie Title :</label>&nbsp; {{filmInfo?.title}}</p>
+      <p ><label id="blue">Movie Director : </label>&nbsp;  {{filmInfo?.director}}</p>
+      <p ><label id="blue">Movie Producer:</label>&nbsp; {{filmInfo?.producer}}</p>
+      <p ><label id="blue">Movie Release Date : </label>&nbsp; {{filmInfo?.release_date}}</p>
+    </div>
+    
+    <!-- ************************************************** -->
+    <!-- Species:
+    <div *ngFor="let sp of starwarsData?.species">
+      <div (click)="getDataForAPI(sp, 'species')">
+        {{ sp }} (click here to see details)
+      </div>
+      <div>
+       <p>Species Info: </p> 
+        <p>Name: {{speciesInfo?.name}}</p>
+        <p>Average Lifespan: {{speciesInfo?.name}}</p>
+        <p>Classification : {{speciesInfo?.name}}</p>
+        <p>Language : {{speciesInfo?.language}}</p>
+      </div>
+    </div> -->
+    <!-- **************************************************** -->
+    <!-- Hitting a nested API for HomeWorld and displaying all the data relevant to it  -->
+    <label id="heading">Home World </label>
+      <div (click)="getDataForAPI(starwarsData?.homeworld, 'homeworld')">
+        {{ starwarsData?.homeworld }}&nbsp;&nbsp;&nbsp;<label style="text-decoration: underline; font-size: 23px;">(click here to see details)</label> 
+      </div>
+    <div>
+      <p><label id="blue">Terrain : &nbsp;</label>  {{homeworldInfo?.terrain}}</p>
+      <p><label id="blue">Population : &nbsp;</label> {{homeworldInfo?.population}}</p>
+    </div>
+
+<!-- Displaying a message when the user enters a non-existing value      -->
+<div class="data-display" *ngIf="this.check==1; else error">
+  <h3>Value does not exist</h3>
+</div>
+</div>
+</div>
+
+<style>
+.parallax {
+
+background: url('./assets/images/searchbanner.jpg') no-repeat center;
+background-attachment: fixed;
+background-size: cover;
+margin-top: 100px;
+min-height: 800px;
+
+}  
+</style>
+
+

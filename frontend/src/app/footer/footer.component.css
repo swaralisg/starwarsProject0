@@ -1,0 +1,34 @@
+/* 
+Displaying backround image for footer */
+
+
+
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
+.footer a {
+  color: white;
+  padding: 25px;
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+i {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#footer-column-1 a {
+  margin-top: 10px;
+}
+
+#footer-column-2 a {
+  margin-top: 10px;
+}

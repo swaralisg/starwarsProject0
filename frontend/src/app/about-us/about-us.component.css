@@ -1,0 +1,47 @@
+#paragraphs {
+    margin-top: 200px;
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.sub-header{
+    background: grey;
+    min-height: 55px;
+}
+
+p{
+    font-size: 25px;
+    font-family: Helvetica;
+    color: wheat;
+    font-weight: bold;
+}
+
+#header-link{
+    color: white;
+    font-size: 32px;
+    font-family: Helvetica;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h1{
+    margin-left: 50px;
+    color: white;
+    font-size: 31px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+a{
+    font-size: 26px;
+color: white;
+font-weight: 800;
+
+cursor: pointer;
+}
+
+.sub-header a:hover{
+    color: black;
+ 
+}

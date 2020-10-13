@@ -1,0 +1,53 @@
+<!-- Displaying the STARWARS title -->
+<div class="body">
+  <div class="title">
+    <div class="fluid-container">
+      <div class="row justify-content-center">
+        <p id="title">
+          <a
+            id="inner-title"
+            style="color: white; text-decoration: none"
+            [routerLink]="['/homepage']"
+            ><label style="cursor: pointer" id="main-initial">S</label>TAR<label
+              style="cursor: pointer"
+              id="main-initial"
+              >W</label
+            >ARS</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Displaying the sub-main header containing all the navbar links -->
+  <div class="header-2">
+    <div
+      style="
+        text-align: center;
+        padding: 3px;
+        background-color: rgb(24, 23, 23);
+      "
+      class="fluid-container"
+    >
+      <div style="font-family: sans-serif; margin-top: 10px" class="row">
+        <div class="col">
+          <a [routerLink]="['/aboutUs']" class="waves-effect eaves-light btn"
+            >About Us</a
+          >
+        </div>
+        <div class="col">
+          <a [routerLink]="['/search']" class="waves-effect eaves-light btn"
+            >Search</a
+          >
+        </div>
+        <div class="col">
+          <a [routerLink]="['/films']" class="waves-effect eaves-light btn"
+            >Films</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

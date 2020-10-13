@@ -1,0 +1,97 @@
+#blue{
+  color: rgb(107, 107, 243) ;
+  font-weight: 700;
+  font-size: 23px;
+  font-family: sans-serif;
+}
+
+#heading{
+  font-size: 25px;
+  font-weight: 800;
+}
+
+
+#input1 {
+  border: 5px solid black;
+  height: 56px;
+  width: 450px;
+  color: black;
+  font-weight: bold;
+  min-width:max-content;
+  background: beige;
+  font-size: 25px;
+}
+
+#input2 {
+  border: 5px solid black;
+  height: 56px;
+  width: 450px;
+  color: black;
+  font-weight: bold;
+  min-width:max-content;
+  background: beige;
+  font-size: 25px;
+}
+
+.data-display{
+  color: blanchedalmond;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+
+button{
+  background: rgb(24, 23, 23); ;
+      color: white;
+      border-radius: 15px 0px 15px 0px;
+      font-size: 21px;
+      font-weight: bolder;
+      border-bottom: 5px solid rgb(107, 107, 243);
+      border-right: 5px solid rgb(107, 107, 243) ;
+      border-left: 5px solid white;
+      border-top: 5px solid white;
+      width: fit-content;
+      padding-left: 18px;
+      padding-right: 18px;
+      text-align: center;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+
+  height: 60px;
+}
+
+
+button:hover{
+    color: black;
+    border-left: 5px solid black;
+      border-top: 5px solid black;
+    background: rgba(245, 245, 245, 0.877);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: rgba(0, 0, 0, 0.726);
+font-size: 23px;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: rgba(0, 0, 0, 0.726);
+font-size: 23px;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color: rgba(0, 0, 0, 0.726);
+font-size: 23px;
+
+}
+
+#display-card{
+text-align: center;
+border: 1px solid black;
+min-height: 600px;
+color: white;
+font-weight: bolder;
+}
+
+
+
